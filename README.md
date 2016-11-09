@@ -36,5 +36,35 @@ superframe能够为阿拉丁导入产品线提供连贯性的动作，提升用�
     </template>
     ```
 
-我们只需要在自己产品线module里面新建异步模板asyTpl.tpl,具体内容根据产品线自身内容放置，
+我们只需要在自己产品线module里面新建异步模板asyTpl.tpl,具体内容根据产品线自身内容放置，参考内容如下：
+
+
+// 引入fis加载框架
+{%staticFramework framework="mobilesearch:static/js/mod.js"%}{%/staticFramework%}
+
+    {%asyncCss%}
+    	// 编译后，运行时pkg.css会自动放入此位置
+    	<!--[FIS_CSS_LINKS_HOOK]-->
+    {%/asyncCss%}
+
+    <template id="sf_async_head_js">
+        {%* 一些放在头部的内联的js *%}
+        {%widget name="mobilesearch:widget/vars/vars.tpl"%}
+    </template>
+
+    <template id="sf_async_body">
+        <div class="image-viewport">
+            <section id="mainsearch" class="mainsearch" {%if $showMediacy %}style="display:none;"{%/if%}>
+                {%widget name="mobilesearch:widget/component/header/header.tpl"%}
+                {%widget name="mobilesearch:widget/component/header/body.tpl"%}
+                {%widget name="mobilesearch:widget/component/gotop/footer.tpl"%}
+            </section>
+        </div>
+        {%* 外联的pkg.js 会在编译后运行时放在该位置，多个包也会都放在该位置*%}
+        <JS_FRAMEWORK_HOOK/> 
+    </template>
+    {%asyncJs%}
+		{%* 各个使用到的widget中的js也会都在编译后运行时放在该位置，此处也可以写一些js*%}
+    {%/asyncJs%}
+
 
