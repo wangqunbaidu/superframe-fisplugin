@@ -71,3 +71,10 @@ superframe能够为阿拉丁导入产品线提供连贯性的动作，提升用�
 2、将pulgin里面的文件替换到产品线的smarty的plugin下即可。
 
 3、注意调试的时候产品线自身页面功能与sf模板同时回归。
+
+
+##线上效果
+
+<div align="center">
+	<img src="./image/sf_02.jpg" />
+</div>
