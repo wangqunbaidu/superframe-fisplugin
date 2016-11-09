@@ -15,4 +15,22 @@ superframe能够为阿拉丁导入产品线提供连贯性的动作，提升用�
 	<img src="./image/sf_01.jpg" />
 </div>
 ##使用方法
+根据superframe规范要求提供的产品线异步页面template模板格式如下：
+
+	<template id="sf_async_head_js">
+        <script>头部js</script>
+    </template>
+    <template id="sf_async_css">
+        <style>.graph-viewport { /* ... */ }</style>
+        <link href="https://some.host/some/path/some.css" rel="stylesheet" type="text/css" />
+    </template>
+    <template id="sf_async_body">
+        <div>各种dom</div>
+    </template>
+
+    <template id="sf_async_foot_js">
+        <script>业务js</script>
+    </template>
+
+我们只需要在自己产品线module里面新建异步模板asyTpl.tpl
 
