@@ -17,7 +17,7 @@ superframe能够为阿拉丁导入产品线提供连贯性的动作，提升用�
 ##使用方法
 根据superframe规范要求提供的产品线异步页面template模板格式如下：
 	
-	```html
+
 	<template id="sf_async_head_js">
         <script>头部js</script>
     </template>
@@ -34,16 +34,16 @@ superframe能够为阿拉丁导入产品线提供连贯性的动作，提升用�
     <template id="sf_async_foot_js">
         <script>内联业务js</script>
     </template>
-    ```
+
 
 我们只需要在自己产品线module里面新建异步模板asyTpl.tpl,具体内容根据产品线自身内容放置，参考内容如下：
 
 
-// 引入fis加载框架
-{%staticFramework framework="mobilesearch:static/js/mod.js"%}{%/staticFramework%}
+	{%* 引入fis加载框架 *%}
+	{%staticFramework framework="mobilesearch:static/js/mod.js"%}{%/staticFramework%}
 
     {%asyncCss%}
-    	// 编译后，运行时pkg.css会自动放入此位置
+    	{%* 编译后，运行时pkg.css会自动放入此位置 *%}
     	<!--[FIS_CSS_LINKS_HOOK]-->
     {%/asyncCss%}
 
