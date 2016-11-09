@@ -11,8 +11,8 @@ superframe能够为阿拉丁导入产品线提供连贯性的动作，提升用�
 
 产品线站内只需要根据sf规范提供改造，新建一个提供给sf的template模板，新建模板与站内模板使用相同widget即可实现一次fis编译后，站内与sf代码共享。通过整体接入方案设计图可以发现本插件即是放入产品线站内plugin里面的php插件。
 
- ![image](./image/sf_01.jpg)
- <img src="./image/sf_01.jpg" />
-
+<div align="center">
+	<img src="./image/sf_01.jpg" />
+</div>
 ##使用方法
 
